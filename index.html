@@ -3,14 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
-  <link rel="stylesheet" href="css/main.css">
+  <title>DevJobs</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <header class="header">
+    <div class="container header__top">
+      <a class="logo" href="index.html">
+        <img class="logo__img" src="img/devjobs.svg" alt="devjobs logo" width="115" height="32">
+      </a>
+      <button class="header__announcement-button js-announcement-button" type="submit">New announcement</button>
+    </div>
+    <div class="container header__bottom">
+      <form class="header__form" action="https://echo.htmlacademy.ru">
+        <input class="header__input header__search-input" type="text" name="search-input" aria-label="search input" placeholder="Filter by title, companies, expertise…">
+        <input class="header__input header__location-input" type="text" name="location-input" aria-label="location input" placeholder="Filter by location…">
+        <label class="header__input header__checkbox-label">
+          <input class="header__checkbox" type="checkbox" name="time checkbox">
+          <span class="header__checkbox-span">Full Time Only</span>
+        </label>
+        <button class="header__submit-button" type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+  <main class="main">
+    <section class="announcements">
+      <div class="container">
+        <ul class="announcements__list">
+          <li class="announcements__item">
+            <div class="announcements__item-top">
+              <p class="announcements__item-time js-time">5h ago</p>
+              <p class="announcements__item-jobtime js-jobtime">Full time</p>
+            </div>
+            <a href="#" class="announcements__job js-job-link">Senior Software Engineer</a>
+            <p class="announcements__employer js-employer">So Digital Inc.</p>
+            <p class="announcements__address js-address">Remote, Seoul, Tokyo, Mountain View, San Fransisco</p>
+          </li>
+        </ul>
+        <a class="announcements__more-link" href="#">More</a>
+      </div>
 
+    </section>
+  </main>
 
+  <section class="modal js-modal">
+    <div class="modal__info-wrapper container container--small">
+      <div class="modal__header">
+        <h2 class="modal__heading">New announcement</h2>
+        <button class="modal__close-button js-modal-close-button"></button>
+      </div>
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="POST">
+        <input class="modal__input js-title-input" type="text" aria-label="title-input" name="title-input" placeholder="Title" required>
+        <input class="modal__input js-company-input" type="text" aria-label="company-input" name="company-input" placeholder="Company" required>
+        <input class="modal__input js-techs-input" type="text" aria-label="techs-input" name="techs-input" placeholder="Technologies" required>
+        <input class="modal__input js-telegram-input" type="text" aria-label="telegram-input" name="telegram-input" placeholder="Telegram" required>
+        <input class="modal__input js-number-input" type="text" aria-label="number-input" name="number-input" placeholder="Phone number" required>
+        <input class="modal__input js-employer-input" type="text" aria-label="employer-input" name="employer-input" placeholder="Employer name" required>
+        <input class="modal__input js-salary-input" type="text" aria-label="salary-input" name="salary-input" placeholder="Minimum salary" required>
 
+        <select class="modal__select js-location-select" name="location" aria-label="location-select">
+          <option class="modal__location-option" value="All" disabled selected>Location</option>
+          <option class="modal__location-option" value="Tashkent">Tashkent</option>
+          <option class="modal__location-option" value="Samarkand">Samarkand</option>
+          <option class="modal__location-option" value="Namangan">Namangan</option>
+          <option class="modal__location-option" value="Bukhara">Bukhara</option>
+          <option class="modal__location-option" value="Andijan">Andijan</option>
+          <option class="modal__location-option" value="Fergana">Fergana</option>
+          <option class="modal__location-option" value="Navai">Navai</option>
+        </select>
 
-  <script src="js/main.js"></script>
+        <select class="modal__select js-worktime-select" name="worktime" aria-label="worktime-select">
+          <option class="modal__worktime-option" value="All" disabled selected>Worktime</option>
+          <option class="modal__worktime-option" value="9am-6pm">9am - 6pm</option>
+          <option class="modal__worktime-option" value="9am-2pm">9am - 2pm</option>
+          <option class="modal__worktime-option" value="1pm-6pm">1pm - 6pm</option>
+          <option class="modal__worktime-option" value="flexible">Flexible</option>
+        </select>
+        <textarea class="modal__textarea" name="modal-textarea" placeholder="More info"></textarea>
+        <button class="modal__submit-button" type="submit">Add</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="new-modal js-new-modal">
+    <div class="new-modal__info container container--small">
+      <div class="new-modal__top">
+        <h2 class="new-modal__heading js-new-title">Title</h2>
+        <button class="new-modal__close-button js-new-modal-close-button"></button>
+      </div>
+      <div class="new-modal__wrapper">
+        <p class="new__modal-company js-new-company">Company</p>
+        <p class="new__modal-location js-new-location">Location</p>
+      </div>
+      <p class="new-modal__techs js-new-techs">Html, Css, Bootstrap, JS</p>
+      <div class="new-modal__wrapper">
+        <a href="" class="new-modal__telegram js-new-telegram">Telegram</a>
+        <a href="" class="new-modal__number js-new-number">Phone Number</a>
+      </div>
+      <div class="new-modal__wrapper">
+        <p class="new__modal-employer js-new-employer">Employer</p>
+        <p class="new__modal-worktime js-new-worktime">Worktime</p>
+      </div>
+      <p class="new-modal__salary js-new-salary">$5600</p>
+      <hr>
+      <h3 class="new-modal__more">More Info</h3>
+      <p class="new-modal__text js-new-moreinfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, animi!</p>
+    </div>
+  </section>
+
+  <template class="js-template">
+    <li class="announcements__item">
+      <div class="announcements__item-top">
+        <p class="announcements__item-time js-time">5h ago</p>
+        <p class="announcements__item-jobtime js-jobtime">Full time</p>
+      </div>
+      <a href="#" class="announcements__job js-job-link">Senior Software Engineer</a>
+      <p class="announcements__employer js-employer">So Digital Inc.</p>
+      <p class="announcements__address js-address">Remote, Seoul, Tokyo, Mountain View, San Fransisco</p>
+    </li>
+  </template>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
