@@ -35,10 +35,17 @@
 .header__form {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .header__input{
   padding: 12px 16px;
   border: 0;
+}
+.header__select{
+  padding: 12px 16px;
+  border:0;
+  background-color: rgba(238, 228, 228, 0.527);
+  border-radius:5px;
 }
 .header__search-input {
   width: 463px;
@@ -56,12 +63,13 @@
   font-weight: bold;
 }
 .header__submit-button {
-  align-self: center;
-  padding: 16px 35px;
-  background-color: #5964E0;
-  border-radius: 5px;
-  border: 0;
-  color: #fff;
-  font-weight: bold;
+  background-image: url(../img/search.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 25px 25px;
+  border:none;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
 }
